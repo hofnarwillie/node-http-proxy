@@ -6,7 +6,8 @@ var proxy = httpProxy.createProxyServer();
 var server = http.createServer(function(req, res) {
     proxy.web(req, res, {
         target: process.env.TARGET_URL,
-        secure: false
+        secure: false,
+        changeOrigin: true
     });
 });
 
