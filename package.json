@@ -1,0 +1,15 @@
+{
+  "name": "node-http-proxy",
+  "version": "1.0.0",
+  "description": "A docker image that proxies all requests to port 80 to the address in the environment variable TARGET_URL",
+  "main": "index.js",
+  "scripts": {
+    "test": "./test/run.sh",
+    "start": "node index.js"
+  },
+  "author": "Willem Le Roux",
+  "license": "MIT",
+  "dependencies": {
+    "http-proxy": "^1.17.0"
+  }
+}

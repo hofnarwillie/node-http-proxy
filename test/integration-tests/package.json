@@ -1,0 +1,15 @@
+{
+    "name": "node-http-proxy-integration-tests",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "integration-test": "mocha -t 15000 './specs/**/*.spec.js'"
+    },
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "mocha": "^3.5.3",
+        "supertest": "^3.0.0",
+        "querystring": "^0.2.0"
+    }
+}

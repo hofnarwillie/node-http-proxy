@@ -1,0 +1,18 @@
+version: "2"
+services:
+  target-server:
+    build: ./target-server
+    ports:
+      - 30200:80
+  http-proxy:
+    build: ..
+    ports:
+      - 30100:80
+    environment:
+      TARGET_URL: https://target-server
+    depends_on:
+      - target-server
+  test:
+    build: ./integration-tests
+    depends_on:
+      - http-proxy
