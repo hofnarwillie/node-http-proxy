@@ -12,4 +12,11 @@ describe('Firing HTTP requests to the proxy', () => {
                 assert(response.body, 'TARGET_SERVER_RESPONSE')
             });
     });
+    it('should return cookie headers', () => {
+        return request.get('')
+            .send()
+            .then(response => {
+                assert(response.header['set-cookie'][0], 'test=foo')
+            });
+    });
 });

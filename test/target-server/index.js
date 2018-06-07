@@ -8,7 +8,10 @@ const options = {
 };
 
 https.createServer(options, function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.writeHead(200, {
+      'Set-Cookie': 'test=foo',
+      'Content-Type': 'text/plain'
+    });
     res.write('TARGET_SERVER_RESPONSE');
     res.end();
 }).listen(443);
